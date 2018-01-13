@@ -17,5 +17,13 @@ namespace FSWeb.Data.DAL
 
         public FSContext(DbContextOptions<FSContext> options) : base(options) { }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Category>().ToTable(Contants.TableNames.Categories);
+            modelBuilder.Entity<Item>().ToTable(Contants.TableNames.Items);
+            modelBuilder.Entity<Find>().ToTable(Contants.TableNames.Finds);
+            base.OnModelCreating(modelBuilder);
+        }
+
     }
 }

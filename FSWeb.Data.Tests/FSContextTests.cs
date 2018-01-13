@@ -1,6 +1,7 @@
 using FSWeb.Data.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Diagnostics;
 
 namespace FSWeb.Data.Tests
@@ -20,7 +21,7 @@ namespace FSWeb.Data.Tests
             builder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=FSWeb;Trusted_Connection=True;MultipleActiveResultSets=true");
             FSContext context = new FSContext(builder.Options);
             context.Database.EnsureCreated();
-            Debug.WriteLine("End");
+            Debug.WriteLine("End - " + DateTime.Now.ToShortTimeString());
 
         }
     }

@@ -9,5 +9,6 @@ namespace FSWeb.Data.Models
         public int Id { get; set; }
         public String Name { get; set; }
         public int CategoryId { get; set; }
+        public Category Category { get; set; }
     }
 }
