@@ -8,5 +8,6 @@ namespace FSWeb.Data.Models
     {
         int Id { get; set; }
         String Name { get; set; }
+        String Notes { get; set; }
     }
 }

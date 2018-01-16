@@ -4,11 +4,14 @@ using System.Text;
 
 namespace FSWeb.Data.Models
 {
-    public class Item : INamedModel
+    public class Item : BaseNamedModel
     {
-        public int Id { get; set; }
-        public String Name { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+
+        public override string ToString()
+        {
+            return base.ToString() + String.Format(" ; CategoryId - {0}", CategoryId);
+        }
     }
 }

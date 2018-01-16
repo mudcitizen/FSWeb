@@ -4,9 +4,7 @@ using System.Text;
 
 namespace FSWeb.Data.Models
 {
-    public class Category  : INamedModel
+    public class Category  : BaseNamedModel
     {
-        public int Id { get; set; }
-        public String Name { get; set; }
     }
 }
