@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ItemSummary>
+<table>
+    <tr>
+        <th>Category</th>
+        <th>Item</th>
+        <th>Times Found</th>
+        <th>Last Found</th>
+    </tr>
+    @foreach (ItemSummary itemSummary in @Model)
+    {
+    <tr>
+        <td>@itemSummary.CategoryName</td>
+        <td>@itemSummary.ItemName</td>
+        <td>@itemSummary.FindCount</td>
+        <td>@itemSummary.LastFind</td>
+    </tr>
+    }
+</table>
+
