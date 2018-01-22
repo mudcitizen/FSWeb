@@ -16,7 +16,7 @@ namespace FSWeb.Data.DAL
         public DbSet<Category> Categories { get; set; }
         public DbSet<Find> Finds { get; set; }
 
-        public IEnumerable<ItemSummary> ItemSummaries
+        public IQueryable<ItemSummary> ItemSummaries
         {
             get
             {
