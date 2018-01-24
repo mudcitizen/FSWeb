@@ -34,7 +34,7 @@ namespace FSWeb
             // Good .. 
             String connStr = Configuration["ConnectionStrings:DefaultConnection"];
 
-            services.AddDbContext<FSContext>(options => options.UseSqlServer(connStr));
+            services.AddDbContext<FSContext>(options => options.UseSqlServer(connStr, o => o.MigrationsAssembly("FSWeb")));
             services.AddTransient<IRepository,SqlRepository>();
             services.AddMvc();
         }

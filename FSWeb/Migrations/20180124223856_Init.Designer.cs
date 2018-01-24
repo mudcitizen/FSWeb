@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
 
-namespace FSWeb.Data.Migrations
+namespace FSWeb.Migrations
 {
     [DbContext(typeof(FSContext))]
-    [Migration("20180122022011_initial")]
-    partial class initial
+    [Migration("20180124223856_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
