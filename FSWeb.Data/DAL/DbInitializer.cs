@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 using FSWeb.Data.Models;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace FSWeb.Data.DAL
 {
@@ -13,6 +13,11 @@ namespace FSWeb.Data.DAL
 
         public static void Initialize(FSContext context)
         {
+            context.Database.Migrate();
+
+            if (context.Categories.Any())
+                return; 
+
             FindCount = 0; 
             Category mushrooms = new Category() { Name = DbInitializerStrings.CategoryNameMushrooms };
             context.Add(mushrooms);
