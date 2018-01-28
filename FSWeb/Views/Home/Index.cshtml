@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ItemSummary>
+﻿@model HomeIndexViewModel
 <table>
     <tr>
         <th>Category</th>
@@ -6,14 +6,15 @@
         <th>Times Found</th>
         <th>Last Found</th>
     </tr>
-    @foreach (ItemSummary itemSummary in @Model)
+    @foreach (ItemSummary itemSummary in @Model.ItemSummaries)
     {
-    <tr>
-        <td>@itemSummary.CategoryName</td>
-        <td>@itemSummary.ItemName</td>
-        <td>@itemSummary.FindCount</td>
-        <td>@itemSummary.LastFind</td>
-    </tr>
+        <tr>
+            <td>@itemSummary.CategoryName</td>
+            <td>@itemSummary.ItemName</td>
+            <td>@itemSummary.FindCount</td>
+            <td>@itemSummary.LastFind</td>
+        </tr>
     }
 </table>
+<div page-model="@Model.PagingInfo" page-action="Index"></div>
 
