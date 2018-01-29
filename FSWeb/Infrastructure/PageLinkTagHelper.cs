@@ -39,7 +39,7 @@ namespace FSWeb.Infrastructure
             {
                 TagBuilder tag = new TagBuilder("a");
                 tag.Attributes["href"] = urlHelper.Action(PageAction,
-                   new { pageNumber = i });
+                   new { page = i });
                 if (PageClassesEnabled)
                 {
                     tag.AddCssClass(PageClass);

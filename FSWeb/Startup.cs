@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using FSWeb.Data.DAL;
+using FSWeb.Infrastructure.Routing;
 
 namespace FSWeb
 {
@@ -49,8 +50,28 @@ namespace FSWeb
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvc(routes => {
-            routes.MapRoute(name: "default",
-                template: "{controller=Home}/{action=Index}/{id?}");});
+
+                RoutingTemplateStringBuilder sb = new RoutingTemplateStringBuilder();
+                sb.AddLiteral(RoutingConstants.Controller.Home);
+                sb.Seperate();
+                sb.AddLiteral(RoutingConstants.StaticText.Page);
+                sb.AddParameter(RoutingConstants.ParameterName.Page);
+
+                String txt = sb.ToString();
+                routes.MapRoute(name: "pagination",
+                template: sb.ToString(),
+                defaults: new ControllerActionRouteSpecification() { Controller = RoutingConstants.Controller.Home, Action = RoutingConstants.Action.Index});
+
+                sb = new RoutingTemplateStringBuilder();
+                sb.AddController(RoutingConstants.Controller.Home);
+                sb.Seperate();
+                sb.AddAction(RoutingConstants.Action.Index);
+                sb.Seperate();
+                sb.AddParameter(RoutingConstants.ParameterName.Id + RoutingConstants.Terms.QuestionMark);
+                txt = sb.ToString();
+                routes.MapRoute(name: "default",
+                template: sb.ToString());
+            });
 
             FSContext context = app.ApplicationServices.GetRequiredService<FSContext>();
             DbInitializer.Initialize(context);
