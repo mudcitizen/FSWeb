@@ -18,20 +18,20 @@ namespace FSWeb.Controllers
         {
             repository = repo;
         }
-        public IActionResult Index(int pageNumber = 1)
+        public IActionResult Index(int page = 1)
         {
             HomeIndexViewModel vm = new HomeIndexViewModel();
 
             vm.ItemSummaries = repository.ItemSummaries
                 .OrderBy(i => i.CategoryName)
                 .OrderBy(i => i.ItemName)
-                .Skip((pageNumber - 1) * PageSize)
+                .Skip((page - 1) * PageSize)
                 .Take(PageSize);
 
             vm.PagingInfo = new PagingInfo();
             vm.PagingInfo.TotalItems = repository.ItemSummaries.Count();
             vm.PagingInfo.ItemsPerPage = PageSize;
-            vm.PagingInfo.CurrentPage = pageNumber;
+            vm.PagingInfo.CurrentPage = page;
 
             return View(vm);
         }
