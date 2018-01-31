@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using FSWeb.Data.DAL;
 using FSWeb.Infrastructure.Routing;
+using AutoMapper;
 
 namespace FSWeb
 {
@@ -28,6 +29,8 @@ namespace FSWeb
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddAutoMapper();
             // Tells it how to get an FSContext - upon which the SqlRepository depends
 
             // Bad - 

@@ -1,4 +1,5 @@
 ﻿using FSWeb.Data.Models;
+using FSWeb.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace FSWeb.Models.ViewModels
     public class HomeIndexViewModel
     {
        public PagingInfo PagingInfo { get; set; }
-       public IEnumerable<ItemSummary> ItemSummaries { get; set; }
+       public IEnumerable<ItemSummaryVM> ItemSummaries { get; set; }
 
     }
 }

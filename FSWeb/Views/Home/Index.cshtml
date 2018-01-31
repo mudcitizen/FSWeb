@@ -1,4 +1,6 @@
 ﻿@model HomeIndexViewModel
+
+
 <table>
     <tr>
         <th>Category</th>
@@ -6,7 +8,7 @@
         <th>Times Found</th>
         <th>Last Found</th>
     </tr>
-    @foreach (ItemSummary itemSummary in @Model.ItemSummaries)
+    @foreach (ItemSummaryVM itemSummary in @Model.ItemSummaries)
     {
         <tr>
             <td>@itemSummary.CategoryName</td>

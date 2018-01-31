@@ -1,13 +1,10 @@
-﻿using FSWeb.Data.Models;
-using System;
-using System.Collections.Generic;
+﻿using FSWeb.Models.ViewModels;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace FSWeb.Repository
 {
     public interface IRepository
     {
-        IQueryable<ItemSummary> ItemSummaries { get; }
+        IQueryable<ItemSummaryVM> ItemSummaries { get; }
     }
 }
