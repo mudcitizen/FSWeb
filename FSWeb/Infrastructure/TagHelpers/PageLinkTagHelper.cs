@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using FSWeb.Models.ViewModels;
 
-namespace FSWeb.Infrastructure
+namespace FSWeb.Infrastructure.TagHelpers
 {
     [HtmlTargetElement("div", Attributes = "page-model")]
     public class PageLinkTagHelper : TagHelper

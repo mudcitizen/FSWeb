@@ -1,22 +1,14 @@
 ﻿@model HomeIndexViewModel
 
 
-<table>
-    <tr>
-        <th>Category</th>
-        <th>Item</th>
-        <th>Times Found</th>
-        <th>Last Found</th>
-    </tr>
-    @foreach (ItemSummaryVM itemSummary in @Model.ItemSummaries)
-    {
-        <tr>
-            <td>@itemSummary.CategoryName</td>
-            <td>@itemSummary.ItemName</td>
-            <td>@itemSummary.FindCount</td>
-            <td>@itemSummary.LastFind</td>
-        </tr>
-    }
-</table>
-<div page-model="@Model.PagingInfo" page-action="Index"></div>
+@foreach (ItemSummaryVM itemSummary in @Model.ItemSummaries)
+{
+  @Html.Partial("ItemSummary",itemSummary)
+}
+
+<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-secondary"
+     page-class-selected="btn-primary" class="btn-group m-1 pull-right">
+
+</div>
 

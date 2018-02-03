@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FSWeb.Data", "FSWeb.Data\FS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FSWeb.Data.Tests", "FSWeb.Data.Tests\FSWeb.Data.Tests.csproj", "{D73F627B-7472-4F0E-BD0B-E44F3CFF363F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSWeb.Tests", "FSWeb.Tests\FSWeb.Tests.csproj", "{BC8CB8FE-43BD-49E9-858D-26DF2F6E1E71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FSWeb.Tests", "FSWeb.Tests\FSWeb.Tests.csproj", "{BC8CB8FE-43BD-49E9-858D-26DF2F6E1E71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
