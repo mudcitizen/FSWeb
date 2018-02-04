@@ -16,11 +16,11 @@ namespace FSWeb.Infrastructure.Routing
 
         public void AddController(string controllerName)
         {
-            AddParameterAndValue(RoutingConstants.Terms.Controller, controllerName);
+            AddParameterAndValue(RoutingConstants.Term.Controller, controllerName);
         }
         public void AddAction(string actionName)
         {
-            AddParameterAndValue(RoutingConstants.Terms.Action, actionName);
+            AddParameterAndValue(RoutingConstants.Term.Action, actionName);
         }
 
         public void AddLiteral(String text)
@@ -29,15 +29,15 @@ namespace FSWeb.Infrastructure.Routing
         }
         public void AddParameter(String text)
         {
-            sb.Append(RoutingConstants.Terms.ParameterOpeningDelimiter + text + RoutingConstants.Terms.ParameterClosingDelimiter);
+            sb.Append(RoutingConstants.Term.ParameterOpeningDelimiter + text + RoutingConstants.Term.ParameterClosingDelimiter);
         }
         public void AddNullableParameter(String text)
         {
-            sb.Append(RoutingConstants.Terms.ParameterOpeningDelimiter + text + RoutingConstants.Terms.ParameterClosingDelimiter);
+            sb.Append(RoutingConstants.Term.ParameterOpeningDelimiter + text + RoutingConstants.Term.ParameterClosingDelimiter);
         }
         public void Seperate()
         {
-            sb.Append(RoutingConstants.Terms.Seperator);
+            sb.Append(RoutingConstants.Term.Seperator);
         }
 
         public override string ToString()
@@ -47,11 +47,15 @@ namespace FSWeb.Infrastructure.Routing
 
         void AddParameterAndValue(String parameterName, String parameterValue)
         {
-            sb.Append(RoutingConstants.Terms.ParameterOpeningDelimiter);
+            sb.Append(RoutingConstants.Term.ParameterOpeningDelimiter);
             sb.Append(parameterName);
-            sb.Append(RoutingConstants.Terms.Equal);
+            sb.Append(RoutingConstants.Term.Equal);
             sb.Append(parameterValue);
-            sb.Append(RoutingConstants.Terms.ParameterClosingDelimiter);
+            sb.Append(RoutingConstants.Term.ParameterClosingDelimiter);
+        }
+
+        public static String AsParameter(String text) {
+            return RoutingConstants.Term.ParameterOpeningDelimiter + text + RoutingConstants.Term.ParameterClosingDelimiter;
         }
     }
 }

@@ -54,26 +54,46 @@ namespace FSWeb
             app.UseStaticFiles();
             app.UseMvc(routes => {
 
-                RoutingTemplateStringBuilder sb = new RoutingTemplateStringBuilder();
-                sb.AddLiteral(RoutingConstants.Controller.Home);
-                sb.Seperate();
-                sb.AddLiteral(RoutingConstants.StaticText.Page);
-                sb.AddParameter(RoutingConstants.ParameterName.Page);
+                String categorySegment = RoutingTemplateStringBuilder.AsParameter(RoutingConstants.Segment.Category);
+                //"Page{page:int}";
+                String page = RoutingConstants.StaticText.Page;
+                String pageSegment = page + RoutingTemplateStringBuilder.AsParameter(page + ":int");
 
-                String txt = sb.ToString();
-                routes.MapRoute(name: "pagination",
-                template: sb.ToString(),
-                defaults: new ControllerActionRouteSpecification() { Controller = RoutingConstants.Controller.Home, Action = RoutingConstants.Action.Index});
+                String home = RoutingConstants.Controller.Home;
+                string index = RoutingConstants.Action.Index;
 
-                sb = new RoutingTemplateStringBuilder();
-                sb.AddController(RoutingConstants.Controller.Home);
-                sb.Seperate();
-                sb.AddAction(RoutingConstants.Action.Index);
-                sb.Seperate();
-                sb.AddParameter(RoutingConstants.ParameterName.Id + RoutingConstants.Terms.QuestionMark);
-                txt = sb.ToString();
-                routes.MapRoute(name: "default",
-                template: sb.ToString());
+                var homeIndexRoutDefaults =     new { controller = home, action = index, page = 1};
+
+                // Category and Page
+                routes.MapRoute(
+                    name : null,
+                    template : categorySegment + RoutingConstants.Term.Seperator + pageSegment,
+                    defaults : new {controller = home, action = index}
+                    );
+
+                // Page only 
+                routes.MapRoute(
+                    name: null,
+                    template: pageSegment,
+                    defaults: homeIndexRoutDefaults
+                    );
+
+                // Category only 
+                routes.MapRoute(
+                    name: null,
+                    template: categorySegment,
+                    defaults: homeIndexRoutDefaults 
+                    );
+
+                // Home / Index default
+                routes.MapRoute(
+                    name: null,
+                    template: "",
+                    defaults: homeIndexRoutDefaults
+                    );
+
+                routes.MapRoute(name: null, template: "{controller}/{action}/{id?}");
+
             });
 
             FSContext context = app.ApplicationServices.GetRequiredService<FSContext>();

@@ -7,7 +7,7 @@ namespace FSWeb.Infrastructure.Routing
 {
     public static class RoutingConstants
     {
-        public static class Terms
+        public static class Term
         {
             public static String Controller => "controller";
             public static String Action => "action";
@@ -37,6 +37,12 @@ namespace FSWeb.Infrastructure.Routing
         public static class ParameterName
         {
             public static String Id = "id";
+            public static String Page = "page";
+        }
+
+        public static class Segment
+        {
+            public static String Category = "category";
             public static String Page = "page";
         }
     }

@@ -9,8 +9,9 @@ namespace FSWeb.Models.ViewModels
 {
     public class HomeIndexViewModel
     {
-       public PagingInfo PagingInfo { get; set; }
-       public IEnumerable<ItemSummaryVM> ItemSummaries { get; set; }
+        public PagingInfo PagingInfo { get; set; }
+        public IEnumerable<ItemSummaryVM> ItemSummaries { get; set; }
+        public String CurrentCategory { get; set; }
 
     }
 }

@@ -1,0 +1,20 @@
+﻿@model IEnumerable<string>
+@using FSWeb.Infrastructure.Routing
+
+<a class="btn btn-block btn-default"
+   asp-action="@RoutingConstants.Action.Index"
+   asp-controller="@RoutingConstants.Controller.Home"
+   asp-route-category="">
+    Home
+</a>
+
+@foreach (string category in Model)
+{
+    <a class="btn btn-block btn-default @(category==ViewBag.SelectedCategory ? "btn-primary" : "btn-secondary")"
+       asp-action="@RoutingConstants.Action.Index"
+       asp-controller="@RoutingConstants.Controller.Home"
+       asp-route-category="@category"
+       asp-route-page="1">
+        @category
+    </a>
+}
