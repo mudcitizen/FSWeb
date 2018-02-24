@@ -1,8 +1,8 @@
 ﻿@model ItemSummaryVM
 <head>
     <style>
-        .floatRight {
-
+        .floatright {
+            float:right;
         }
     </style>
 </head>
@@ -11,14 +11,14 @@
     <div class="bg-faded p-1">
         <h4>
             @Model.ItemName
-            <span style="float:right;">
+            <span class="floatright" style="padding-left: 30px">
                 @Model.CategoryName
             </span>
         </h4>
     </div>
     <div class="card-text p-1 ">
         <small>Finds - @Model.FindCount </small>
-        <span style="float:right;">
+        <span class="floatright">
             <small>Last - @Model.LastFind </small>
         </span>
     </div>
