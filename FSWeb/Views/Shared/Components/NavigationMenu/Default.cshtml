@@ -4,8 +4,9 @@
 <a class="btn btn-block btn-default"
    asp-action="@RoutingConstants.Action.Index"
    asp-controller="@RoutingConstants.Controller.Home"
-   asp-route-category="">
-    Home
+   asp-route-category=""
+   asp-route-page="1">
+    @RoutingConstants.Controller.Home
 </a>
 
 @foreach (string category in Model)
