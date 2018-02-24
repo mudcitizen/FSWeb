@@ -12,7 +12,7 @@ namespace FSWeb.Controllers
     public class HomeController : Controller
     {
         IRepository repository;
-        int PageSize = 1;
+        int PageSize = 2;
 
         public HomeController(IRepository repo)
         {
@@ -20,11 +20,12 @@ namespace FSWeb.Controllers
         }
         public IActionResult Index(String category, int page = 1)
         {
+
+            IEnumerable<ItemSummaryVM> isvms = repository.ItemSummaries.Where(itemSum => category == null || itemSum.CategoryName.Equals(category, StringComparison.CurrentCultureIgnoreCase));
             HomeIndexViewModel vm = new HomeIndexViewModel()
+
             {
-                ItemSummaries = repository.ItemSummaries
-                .Where(i => category == null || i.CategoryName.Equals(category,StringComparison.CurrentCultureIgnoreCase))
-                .OrderBy(i => i.CategoryName)
+                ItemSummaries = isvms.OrderBy(i => i.CategoryName)
                 .OrderBy(i => i.ItemName)
                 .Skip((page - 1) * PageSize)
                 .Take(PageSize),
@@ -33,7 +34,8 @@ namespace FSWeb.Controllers
 
                 PagingInfo = new PagingInfo()
                 {
-                    TotalItems = repository.ItemSummaries.Select(itemSum => itemSum.CategoryName).Distinct().Count(),
+                    
+                    TotalItems = isvms.Count(),
                     ItemsPerPage = PageSize,
                     CurrentPage = page
                 }
