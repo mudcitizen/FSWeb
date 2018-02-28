@@ -29,6 +29,10 @@ namespace FSWeb.Data.DAL
             context.Add(chantrelle);
             Item blackTrumpet= new Item() { Name = DbInitializerStrings.ItemNameBlackTrumpet, CategoryId = mushrooms.Id };
             context.Add(blackTrumpet);
+            Item chickenOfTheWood = new Item() { Name = DbInitializerStrings.ItemNameChickenOfTheWood, CategoryId = mushrooms.Id };
+            context.Add(chickenOfTheWood);
+            Item henOfTheWood = new Item() { Name = DbInitializerStrings.ItemNameHenOfTheWood, CategoryId = mushrooms.Id };
+            context.Add(henOfTheWood);
             Item trillium = new Item() { Name = DbInitializerStrings.ItemNameTrillium, CategoryId = wildFlowers.Id };
             context.Add(trillium);
             Item ladySlipper = new Item() { Name = DbInitializerStrings.ItemNameLadySlipper, CategoryId = wildFlowers.Id };
@@ -42,6 +46,13 @@ namespace FSWeb.Data.DAL
             // Black Trumpet
             AddFind(context, DbInitializerStrings.FindNameBlackTrumpet1, blackTrumpet.Id);
             AddFind(context, DbInitializerStrings.FindNameBlackTrumpet2, blackTrumpet.Id);
+
+            // Chicken of the wood
+            AddFind(context, DbInitializerStrings.FindNameChickenOfTheWood1, chickenOfTheWood.Id);
+            AddFind(context, DbInitializerStrings.FindNameChickenOfTheWood2, chickenOfTheWood.Id);
+
+            // Hen of the wood
+            AddFind(context, DbInitializerStrings.FindNameHenOfTheWood1, henOfTheWood.Id);
 
             // Trillium
             AddFind(context, DbInitializerStrings.FindNameTrillium1, trillium.Id);

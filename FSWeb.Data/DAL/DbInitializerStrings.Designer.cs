@@ -115,6 +115,33 @@ namespace FSWeb.Data.DAL {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cady&apos;s Falls Benchcut.
+        /// </summary>
+        internal static string FindNameChickenOfTheWood1 {
+            get {
+                return ResourceManager.GetString("FindNameChickenOfTheWood1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cady&apos;s Falls Climb to Leo&apos;s.
+        /// </summary>
+        internal static string FindNameChickenOfTheWood2 {
+            get {
+                return ResourceManager.GetString("FindNameChickenOfTheWood2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Corner of Maple Run.
+        /// </summary>
+        internal static string FindNameHenOfTheWood1 {
+            get {
+                return ResourceManager.GetString("FindNameHenOfTheWood1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tom Gz.
         /// </summary>
         internal static string FindNameLadySlipper1 {
@@ -165,6 +192,24 @@ namespace FSWeb.Data.DAL {
         internal static string ItemNameChantrelle {
             get {
                 return ResourceManager.GetString("ItemNameChantrelle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chicken of the wood.
+        /// </summary>
+        internal static string ItemNameChickenOfTheWood {
+            get {
+                return ResourceManager.GetString("ItemNameChickenOfTheWood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hen of the wood.
+        /// </summary>
+        internal static string ItemNameHenOfTheWood {
+            get {
+                return ResourceManager.GetString("ItemNameHenOfTheWood", resourceCulture);
             }
         }
         

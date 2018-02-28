@@ -135,6 +135,15 @@
   <data name="FindNameChantrelle2" xml:space="preserve">
     <value>Shaw Hill</value>
   </data>
+  <data name="FindNameChickenOfTheWood1" xml:space="preserve">
+    <value>Cady's Falls Benchcut</value>
+  </data>
+  <data name="FindNameChickenOfTheWood2" xml:space="preserve">
+    <value>Cady's Falls Climb to Leo's</value>
+  </data>
+  <data name="FindNameHenOfTheWood1" xml:space="preserve">
+    <value>Corner of Maple Run</value>
+  </data>
   <data name="FindNameLadySlipper1" xml:space="preserve">
     <value>Tom Gz</value>
   </data>
@@ -152,6 +161,12 @@
   </data>
   <data name="ItemNameChantrelle" xml:space="preserve">
     <value>Chantrelle</value>
+  </data>
+  <data name="ItemNameChickenOfTheWood" xml:space="preserve">
+    <value>Chicken of the wood</value>
+  </data>
+  <data name="ItemNameHenOfTheWood" xml:space="preserve">
+    <value>Hen of the wood</value>
   </data>
   <data name="ItemNameLadySlipper" xml:space="preserve">
     <value>Lady Slipper</value>
