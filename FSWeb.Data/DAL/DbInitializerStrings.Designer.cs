@@ -61,6 +61,15 @@ namespace FSWeb.Data.DAL {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edibles.
+        /// </summary>
+        internal static string CategoryNameEdibles {
+            get {
+                return ResourceManager.GetString("CategoryNameEdibles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mushroom.
         /// </summary>
         internal static string CategoryNameMushrooms {
@@ -160,6 +169,24 @@ namespace FSWeb.Data.DAL {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cady&apos;s Falls Big Rainbow.
+        /// </summary>
+        internal static string FindNameLeek1 {
+            get {
+                return ResourceManager.GetString("FindNameLeek1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cady&apos;s Fall FTFT.
+        /// </summary>
+        internal static string FindNameLeek2 {
+            get {
+                return ResourceManager.GetString("FindNameLeek2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mud City Rapids.
         /// </summary>
         internal static string FindNameTrillium1 {
@@ -219,6 +246,15 @@ namespace FSWeb.Data.DAL {
         internal static string ItemNameLadySlipper {
             get {
                 return ResourceManager.GetString("ItemNameLadySlipper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Leeks.
+        /// </summary>
+        internal static string ItemNameLeek {
+            get {
+                return ResourceManager.GetString("ItemNameLeek", resourceCulture);
             }
         }
         

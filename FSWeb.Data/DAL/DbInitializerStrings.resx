@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CategoryNameEdibles" xml:space="preserve">
+    <value>Edibles</value>
+  </data>
   <data name="CategoryNameMushrooms" xml:space="preserve">
     <value>Mushroom</value>
   </data>
@@ -150,6 +153,12 @@
   <data name="FindNameLadySlipper2" xml:space="preserve">
     <value>Darling Hill</value>
   </data>
+  <data name="FindNameLeek1" xml:space="preserve">
+    <value>Cady's Falls Big Rainbow</value>
+  </data>
+  <data name="FindNameLeek2" xml:space="preserve">
+    <value>Cady's Fall FTFT</value>
+  </data>
   <data name="FindNameTrillium1" xml:space="preserve">
     <value>Mud City Rapids</value>
   </data>
@@ -170,6 +179,9 @@
   </data>
   <data name="ItemNameLadySlipper" xml:space="preserve">
     <value>Lady Slipper</value>
+  </data>
+  <data name="ItemNameLeek" xml:space="preserve">
+    <value>Leeks</value>
   </data>
   <data name="ItemNameTrillium" xml:space="preserve">
     <value>Trillium</value>
