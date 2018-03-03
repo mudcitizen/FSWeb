@@ -117,6 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BlackTrumpetNotes" xml:space="preserve">
+    <value>Craterellus cornucopioides, or horn of plenty, is an edible mushroom. It is also known as the black chanterelle, black trumpet, trompette de la mort (French), trombetta dei morti (Italian) or trumpet of the dead.
+
+The Cornucopia, in Greek mythology, referred to the magnificent horn of the nymph Amalthea's goat (or of herself in goat form), that filled itself with whatever meat or drink its owner requested. It has become the symbol of plenty.
+
+Craterellus cornucopioides, or horn of plenty, is an edible mushroom. It is also known as the black chanterelle, black trumpet, trompette de la mort (French), trombetta dei morti (Italian) or trumpet of the dead.
+
+The Cornucopia, in Greek mythology, referred to the magnificent horn of the nymph Amalthea's goat (or of herself in goat form), that filled itself with whatever meat or drink its owner requested. It has become the symbol of plenty.
+
+A possible origin for the name "trumpet of the dead" is that the growing mushrooms were seen as being played as trumpets by dead people under the ground.</value>
+  </data>
   <data name="CategoryNameEdibles" xml:space="preserve">
     <value>Edibles</value>
   </data>
@@ -125,6 +136,12 @@
   </data>
   <data name="CategoryNameWildflowers" xml:space="preserve">
     <value>Wildflowers</value>
+  </data>
+  <data name="ChantrelleNotes" xml:space="preserve">
+    <value>Chanterelle is the common name of fungi in the genus Cantharellus. They are among the most popularly eaten species of wild mushrooms. They are orange, yellow or white, meaty and funnel-shaped. On the lower surface, underneath the smooth cap, most species have gill-like ridges that run almost all the way down its stipe, which tapers down seamlessly from the cap. Many species emit a fruity aroma, reminiscent of apricots, and often have a mildly peppery taste (hence its German name, Pfifferling).</value>
+  </data>
+  <data name="ChickenOfTheWoodNotes" xml:space="preserve">
+    <value>Laetiporus is a genus of edible mushrooms found throughout much of the world. Some species, especially Laetiporus sulphureus, are commonly known as sulphur shelf, chicken of the woods, the chicken mushroom, or the chicken fungus because many think they taste like chicken. The name "chicken of the woods" is not to be confused with the edible polypore, Maitake (Grifola frondosa) known as "hen of the woods", or with Lyophyllum decastes, known as the "fried chicken mushroom". The name Laetiporus means "with bright pores".[1]</value>
   </data>
   <data name="FindNameBlackTrumpet1" xml:space="preserve">
     <value>Cady Hill</value>
@@ -164,6 +181,11 @@
   </data>
   <data name="FindNameTrillium2" xml:space="preserve">
     <value>Burlington Bike Path</value>
+  </data>
+  <data name="HenOfTheWoodNotes" xml:space="preserve">
+    <value>Grifola frondosa is a polypore mushroom that grows in clusters at the base of trees, particularly oaks. The mushroom is commonly known among English speakers as hen of the woods, hen-of-the-woods, ram's head and sheep's head. It is typically found in late summer to early autumn. In the United States' supplement market, as well as in Asian grocery stores, the mushroom is known by its Japanese name maitake (舞茸, "dancing mushroom"). Throughout Italian American communities in the northeastern United States, it is commonly known as the signorina mushroom. G. frondosa should not be confused with Laetiporus sulphureus, another edible bracket fungus that is commonly called chicken of the woods or "sulphur shelf". Like all polypores, the fungus becomes inedible when older, because it is then too tough to eat.
+
+The fungus is native to China,[2] the northeastern part of Japan and North America, and is prized in traditional Chinese and Japanese herbology as a medicinal mushroom. It is widely eaten in Japan, and its popularity in western cuisine is growing, although the mushroom has been reported to cause allergic reactions in rare cases.</value>
   </data>
   <data name="ItemNameBlackTrumpet" xml:space="preserve">
     <value>Black Trumpet</value>

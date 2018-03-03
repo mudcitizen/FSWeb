@@ -22,25 +22,25 @@ namespace FSWeb.Data.DAL
             Category mushrooms = new Category() { Name = DbInitializerStrings.CategoryNameMushrooms };
             context.Add(mushrooms);
             // Chantrelle 
-            Item chantrelle = new Item() { Name = DbInitializerStrings.ItemNameChantrelle, CategoryId = mushrooms.Id };
+            Item chantrelle = new Item() { Name = DbInitializerStrings.ItemNameChantrelle, CategoryId = mushrooms.Id, Notes = DbInitializerStrings.ChantrelleNotes };
             context.Add(chantrelle);
             AddFind(context, DbInitializerStrings.FindNameChantrelle1, chantrelle.Id);
             AddFind(context, DbInitializerStrings.FindNameChantrelle2, chantrelle.Id);
 
             // Black Trumpet
-            Item blackTrumpet = new Item() { Name = DbInitializerStrings.ItemNameBlackTrumpet, CategoryId = mushrooms.Id };
+            Item blackTrumpet = new Item() { Name = DbInitializerStrings.ItemNameBlackTrumpet, CategoryId = mushrooms.Id, Notes = DbInitializerStrings.BlackTrumpetNotes };
             context.Add(blackTrumpet);
             AddFind(context, DbInitializerStrings.FindNameBlackTrumpet1, blackTrumpet.Id);
             AddFind(context, DbInitializerStrings.FindNameBlackTrumpet2, blackTrumpet.Id);
 
             // Chicken of the wood
-            Item chickenOfTheWood = new Item() { Name = DbInitializerStrings.ItemNameChickenOfTheWood, CategoryId = mushrooms.Id };
+            Item chickenOfTheWood = new Item() { Name = DbInitializerStrings.ItemNameChickenOfTheWood, CategoryId = mushrooms.Id, Notes = DbInitializerStrings.ChickenOfTheWoodNotes };
             context.Add(chickenOfTheWood);
             AddFind(context, DbInitializerStrings.FindNameChickenOfTheWood1, chickenOfTheWood.Id);
             AddFind(context, DbInitializerStrings.FindNameChickenOfTheWood2, chickenOfTheWood.Id);
 
             // Hen of the wood
-            Item henOfTheWood = new Item() { Name = DbInitializerStrings.ItemNameHenOfTheWood, CategoryId = mushrooms.Id };
+            Item henOfTheWood = new Item() { Name = DbInitializerStrings.ItemNameHenOfTheWood, CategoryId = mushrooms.Id, Notes = DbInitializerStrings.HenOfTheWoodNotes };
             context.Add(henOfTheWood);
             AddFind(context, DbInitializerStrings.FindNameHenOfTheWood1, henOfTheWood.Id);
 

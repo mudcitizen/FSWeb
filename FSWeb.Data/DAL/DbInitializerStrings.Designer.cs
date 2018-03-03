@@ -61,6 +61,19 @@ namespace FSWeb.Data.DAL {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Craterellus cornucopioides, or horn of plenty, is an edible mushroom. It is also known as the black chanterelle, black trumpet, trompette de la mort (French), trombetta dei morti (Italian) or trumpet of the dead.
+        ///
+        ///The Cornucopia, in Greek mythology, referred to the magnificent horn of the nymph Amalthea&apos;s goat (or of herself in goat form), that filled itself with whatever meat or drink its owner requested. It has become the symbol of plenty.
+        ///
+        ///Craterellus cornucopioides, or horn of plenty, is an edible m [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string BlackTrumpetNotes {
+            get {
+                return ResourceManager.GetString("BlackTrumpetNotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edibles.
         /// </summary>
         internal static string CategoryNameEdibles {
@@ -84,6 +97,24 @@ namespace FSWeb.Data.DAL {
         internal static string CategoryNameWildflowers {
             get {
                 return ResourceManager.GetString("CategoryNameWildflowers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chanterelle is the common name of fungi in the genus Cantharellus. They are among the most popularly eaten species of wild mushrooms. They are orange, yellow or white, meaty and funnel-shaped. On the lower surface, underneath the smooth cap, most species have gill-like ridges that run almost all the way down its stipe, which tapers down seamlessly from the cap. Many species emit a fruity aroma, reminiscent of apricots, and often have a mildly peppery taste (hence its German name, Pfifferling)..
+        /// </summary>
+        internal static string ChantrelleNotes {
+            get {
+                return ResourceManager.GetString("ChantrelleNotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Laetiporus is a genus of edible mushrooms found throughout much of the world. Some species, especially Laetiporus sulphureus, are commonly known as sulphur shelf, chicken of the woods, the chicken mushroom, or the chicken fungus because many think they taste like chicken. The name &quot;chicken of the woods&quot; is not to be confused with the edible polypore, Maitake (Grifola frondosa) known as &quot;hen of the woods&quot;, or with Lyophyllum decastes, known as the &quot;fried chicken mushroom&quot;. The name Laetiporus means &quot;with bri [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ChickenOfTheWoodNotes {
+            get {
+                return ResourceManager.GetString("ChickenOfTheWoodNotes", resourceCulture);
             }
         }
         
@@ -201,6 +232,15 @@ namespace FSWeb.Data.DAL {
         internal static string FindNameTrillium2 {
             get {
                 return ResourceManager.GetString("FindNameTrillium2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Grifola frondosa is a polypore mushroom that grows in clusters at the base of trees, particularly oaks. The mushroom is commonly known among English speakers as hen of the woods, hen-of-the-woods, ram&apos;s head and sheep&apos;s head. It is typically found in late summer to early autumn. In the United States&apos; supplement market, as well as in Asian grocery stores, the mushroom is known by its Japanese name maitake (舞茸, &quot;dancing mushroom&quot;). Throughout Italian American communities in the northeastern United States, it  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HenOfTheWoodNotes {
+            get {
+                return ResourceManager.GetString("HenOfTheWoodNotes", resourceCulture);
             }
         }
         
