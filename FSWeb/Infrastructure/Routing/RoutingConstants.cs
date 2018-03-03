@@ -24,10 +24,12 @@ namespace FSWeb.Infrastructure.Routing
         public static class Controller
         {
             public static String Home => "Home";
+            public static String Item => "Item";
         }
         public static class Action
         {
             public static String Index => "Index";
+            public static String Display => "Display";
         }
 
         public static class StaticText
