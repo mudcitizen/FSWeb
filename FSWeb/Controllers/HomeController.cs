@@ -7,11 +7,6 @@ using FSWeb.Models.ViewModels;
 using FSWeb.Repository;
 using Microsoft.AspNetCore.Mvc;
 
-// Comment so I can test github push
-// 2nd Comment so I can test github push
-// 3rd Comment so I can test github push
-// 4th Comment so I can test github push
-
 
 namespace FSWeb.Controllers
 {

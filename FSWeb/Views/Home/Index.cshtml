@@ -1,14 +1,22 @@
 ﻿@model HomeIndexViewModel
 
+<div class="row"></div>
+<div class="row panel">
+    <div id="categories" class="col-3">
+        @await Component.InvokeAsync("NavigationMenu")
+    </div>
+    <div class="col-xs-8">
+        @foreach (ItemSummaryVM itemSummary in @Model.ItemSummaries)
+        {
+            @Html.Partial("ItemSummary", itemSummary)
+        }
 
-@foreach (ItemSummaryVM itemSummary in @Model.ItemSummaries)
-{
-  @Html.Partial("ItemSummary",itemSummary)
-}
+        <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
+             page-class="btn" page-class-normal="btn-secondary" page-url-category="@Model.CurrentCategory"
+             page-class-selected="btn-primary" class="btn-group m-1 pull-right">
 
-<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
-     page-class="btn" page-class-normal="btn-secondary" page-url-category="@Model.CurrentCategory"
-     page-class-selected="btn-primary" class="btn-group m-1 pull-right">
+        </div>
 
+    </div>
 </div>
 
