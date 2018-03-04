@@ -21,6 +21,31 @@ namespace FSWeb.Repository
             };
         }
 
-        public IQueryable<ItemSummaryVM> ItemSummaries => itemSummaries.AsQueryable<ItemSummaryVM>();
+        public IQueryable<ItemSummaryVM> ItemSummaries => throw new NotImplementedException();
+
+        public void DeleteItem(ItemVM entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<ItemVM> GetAllItems()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ItemVM GetItem(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void InsertItem(ItemVM entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateItem(ItemVM entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace FSWeb.Infrastructure.Mapping
         public MappingProfile()
         {
             CreateMap<ItemSummary, ItemSummaryVM>().ReverseMap();
+            CreateMap<Item, ItemVM>().ReverseMap();
         }
     }
 }

@@ -15,6 +15,8 @@ namespace FSWeb.Repository
         FSContext dbContext;
         IMapper mapper;
 
+        SqlEntityRepository<Item> ItemRepository => new SqlEntityRepository<Item>(dbContext);
+
         public SqlRepository(FSContext context,IMapper mapperParm)
         {
             dbContext = context;
@@ -24,11 +26,37 @@ namespace FSWeb.Repository
         {
             get
             {
-                ItemSummary itemSum = dbContext.ItemSummaries.First();
-                ItemSummaryVM isvm = mapper.Map<ItemSummaryVM>(itemSum);
-                String s = isvm.ToString();
+                // Pretty sure the following is debugging code
+                //ItemSummary itemSum = dbContext.ItemSummaries.First();
+                //ItemSummaryVM isvm = mapper.Map<ItemSummaryVM>(itemSum);
+                //String s = isvm.ToString();
                 return dbContext.ItemSummaries.ProjectTo<ItemSummaryVM>().AsQueryable();
             }
+        }
+
+        public ItemVM GetItem(int id)
+        {
+            return mapper.Map<ItemVM>(ItemRepository.Get(id));
+        }
+
+        public IEnumerable<ItemVM> GetAllItems()
+        {
+            return ItemRepository.GetAll().AsQueryable().ProjectTo<ItemVM>();
+        }
+
+        public void InsertItem(ItemVM entity)
+        {
+            ItemRepository.Insert(mapper.Map<Item>(entity));
+        }
+
+        public void UpdateItem(ItemVM entity)
+        {
+            ItemRepository.Update(mapper.Map<Item>(entity));
+        }
+
+        public void DeleteItem(ItemVM entity)
+        {
+            ItemRepository.Delete(mapper.Map<Item>(entity));
         }
     }
 }
