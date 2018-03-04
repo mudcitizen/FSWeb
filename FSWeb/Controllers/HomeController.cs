@@ -23,7 +23,7 @@ namespace FSWeb.Controllers
         {
 
             IEnumerable<ItemSummaryVM> isvms = repository.ItemSummaries.Where(itemSum => category == null || itemSum.CategoryName.Equals(category, StringComparison.CurrentCultureIgnoreCase));
-            HomeIndexViewModel vm = new HomeIndexViewModel()
+            HomeIndexVM vm = new HomeIndexVM()
 
             {
                 ItemSummaries = isvms.OrderBy(i => i.CategoryName)
