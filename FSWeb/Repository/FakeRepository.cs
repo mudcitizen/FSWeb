@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FSWeb.Data.Models;
+using FSWeb.Models;
 using FSWeb.Models.ViewModels;
 
 namespace FSWeb.Repository
@@ -23,27 +23,52 @@ namespace FSWeb.Repository
 
         public IQueryable<ItemSummaryVM> ItemSummaries => throw new NotImplementedException();
 
-        public void DeleteItem(ItemVM entity)
+        public void DeleteCategory(CategoryUI entity)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ItemVM> GetAllItems()
+        public void DeleteItem(ItemUI entity)
         {
             throw new NotImplementedException();
         }
 
-        public ItemVM GetItem(int id)
+        public IEnumerable<CategoryUI> GetAllCategories()
         {
             throw new NotImplementedException();
         }
 
-        public void InsertItem(ItemVM entity)
+        public IEnumerable<ItemUI> GetAllItems()
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateItem(ItemVM entity)
+        public CategoryUI GetCategory(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ItemUI GetItem(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void InsertCategory(CategoryUI entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void InsertItem(ItemUI entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateCategory(CategoryUI entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateItem(ItemUI entity)
         {
             throw new NotImplementedException();
         }

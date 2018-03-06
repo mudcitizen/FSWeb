@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using FSWeb.Models;
 using FSWeb.Models.ViewModels;
 using FSWeb.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -17,10 +14,13 @@ namespace FSWeb.Controllers
             repo = repository;
         }
 
-        public String Display(int id)
+        public IActionResult Display(int id)
         {
-            ItemVM item = repo.GetItem(id);
-            return String.Format("ItemContoller.Display - {0}", item.ToString());
+            ItemUI item = repo.GetItem(id);
+            CategoryUI category = repo.GetCategory(item.CategoryId);
+
+            ItemVM vm = new ItemVM() { Item = item, Category = category };
+            return View(vm);
         }
     }
 }
