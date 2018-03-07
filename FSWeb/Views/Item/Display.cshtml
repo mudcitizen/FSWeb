@@ -1,9 +1,27 @@
-﻿@model  ItemVM
+﻿@model ItemVM
 @*<form asp-controller="Item" asp-action="Display" method="get">*@
-    Name: <input asp-for="@Model.Item.Name" />
-    <br />
-    Category: <input asp-for="@Model.Category.Name" />
-    <br />
-    Notes : <input asp-for="@Model.Item.Notes" />
-    <br />
+<div class="row">
+    <div class="col-1">
+        <label>Name:</label>
+    </div>
+    <div class="col-11">
+        <input asp-for="@Model.Item.Name" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-1">
+        <label>Category:</label>
+    </div>
+    <div class="col-11">
+        <select asp-for="@Model.Item.Id" asp-items="@Model.CategorySelector"></select>
+    </div>
+</div>
+<div class="row">
+    <div class="col-1">
+        <label>Notes:</label>
+    </div>
+    <div class="col-11">
+        <textarea rows="5" cols="80" asp-for="@Model.Item.Notes"></textarea>
+    </div>
+</div>
 @*</form>*@
